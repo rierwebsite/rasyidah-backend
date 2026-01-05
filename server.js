@@ -26,10 +26,9 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'rierwebsite@gmail.com',
-    pass: 'lnnu sllx wuso lkvu'  // ← Ganti sini!
+    pass: process.env.lnnu sllx wuso lkvu  // ← Tukar jadi macam ni je
   }
 });
-
 // Route utama untuk terima semua form
 app.post('/send-message', async (req, res) => {
   try {
@@ -73,4 +72,5 @@ app.post('/send-message', async (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server berjalan di port ${PORT}`);
+
 });
